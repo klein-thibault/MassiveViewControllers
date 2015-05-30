@@ -10,26 +10,35 @@ import UIKit
 
 class PIMassiveProductViewController: UIViewController {
 
+    // Product Informations View
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+
+    // Options
+    @IBOutlet weak var optionsTableView: UITableView!
+
+    // More Products
+    @IBOutlet weak var moreProductsCollectionView: UICollectionView!
+
+    var product: PIProduct?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadProduct()
+        setupView(product!)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadProduct() {
+        // Here you should do an API call
+        product = PIProduct.defaultProduct()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupView(product: PIProduct) {
+        productNameLabel.text = product.name
+        productImageView.image = product.image
+        productPriceLabel.text = "$\(product.price)"
     }
-    */
 
 }

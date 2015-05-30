@@ -14,6 +14,7 @@
 		8EFF15071B195C470030BF45 /* MassiveViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15061B195C470030BF45 /* MassiveViewControllerTests.swift */; };
 		8EFF15131B1961B00030BF45 /* PICleanProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15121B1961B00030BF45 /* PICleanProductViewController.swift */; };
 		8EFF15151B1961F80030BF45 /* PIMassiveProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15141B1961F80030BF45 /* PIMassiveProductViewController.swift */; };
+		8EFF15181B1966330030BF45 /* PIProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15171B1966330030BF45 /* PIProduct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		8EFF15061B195C470030BF45 /* MassiveViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassiveViewControllerTests.swift; sourceTree = "<group>"; };
 		8EFF15121B1961B00030BF45 /* PICleanProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PICleanProductViewController.swift; sourceTree = "<group>"; };
 		8EFF15141B1961F80030BF45 /* PIMassiveProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIMassiveProductViewController.swift; sourceTree = "<group>"; };
+		8EFF15171B1966330030BF45 /* PIProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIProduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				8EFF14EE1B195C460030BF45 /* AppDelegate.swift */,
 				8EFF14F41B195C460030BF45 /* Main.storyboard */,
+				8EFF15161B19662A0030BF45 /* Models */,
 				8EFF15101B19618B0030BF45 /* Clean */,
 				8EFF15111B19618B0030BF45 /* Massive */,
 				8EFF14F71B195C470030BF45 /* Images.xcassets */,
@@ -129,6 +132,14 @@
 				8EFF15141B1961F80030BF45 /* PIMassiveProductViewController.swift */,
 			);
 			path = Massive;
+			sourceTree = "<group>";
+		};
+		8EFF15161B19662A0030BF45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EFF15171B1966330030BF45 /* PIProduct.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFF15181B1966330030BF45 /* PIProduct.swift in Sources */,
 				8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */,
 				8EFF15151B1961F80030BF45 /* PIMassiveProductViewController.swift in Sources */,
 				8EFF15131B1961B00030BF45 /* PICleanProductViewController.swift in Sources */,
