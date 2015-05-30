@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF14EE1B195C460030BF45 /* AppDelegate.swift */; };
-		8EFF14F11B195C460030BF45 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF14F01B195C460030BF45 /* FirstViewController.swift */; };
-		8EFF14F31B195C460030BF45 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF14F21B195C460030BF45 /* SecondViewController.swift */; };
 		8EFF14F61B195C460030BF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF14F41B195C460030BF45 /* Main.storyboard */; };
 		8EFF14F81B195C470030BF45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF14F71B195C470030BF45 /* Images.xcassets */; };
 		8EFF14FB1B195C470030BF45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF14F91B195C470030BF45 /* LaunchScreen.xib */; };
 		8EFF15071B195C470030BF45 /* MassiveViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15061B195C470030BF45 /* MassiveViewControllerTests.swift */; };
+		8EFF15131B1961B00030BF45 /* PICleanProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15121B1961B00030BF45 /* PICleanProductViewController.swift */; };
+		8EFF15151B1961F80030BF45 /* PIMassiveProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15141B1961F80030BF45 /* PIMassiveProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +30,14 @@
 		8EFF14E91B195C460030BF45 /* MassiveViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MassiveViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFF14ED1B195C460030BF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFF14EE1B195C460030BF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EFF14F01B195C460030BF45 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8EFF14F21B195C460030BF45 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8EFF14F51B195C460030BF45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EFF14F71B195C470030BF45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8EFF14FA1B195C470030BF45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8EFF15001B195C470030BF45 /* MassiveViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MassiveViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFF15051B195C470030BF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFF15061B195C470030BF45 /* MassiveViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassiveViewControllerTests.swift; sourceTree = "<group>"; };
+		8EFF15121B1961B00030BF45 /* PICleanProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PICleanProductViewController.swift; sourceTree = "<group>"; };
+		8EFF15141B1961F80030BF45 /* PIMassiveProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIMassiveProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				8EFF14EE1B195C460030BF45 /* AppDelegate.swift */,
-				8EFF14F01B195C460030BF45 /* FirstViewController.swift */,
-				8EFF14F21B195C460030BF45 /* SecondViewController.swift */,
 				8EFF14F41B195C460030BF45 /* Main.storyboard */,
+				8EFF15101B19618B0030BF45 /* Clean */,
+				8EFF15111B19618B0030BF45 /* Massive */,
 				8EFF14F71B195C470030BF45 /* Images.xcassets */,
 				8EFF14F91B195C470030BF45 /* LaunchScreen.xib */,
 				8EFF14EC1B195C460030BF45 /* Supporting Files */,
@@ -113,6 +113,22 @@
 				8EFF15051B195C470030BF45 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EFF15101B19618B0030BF45 /* Clean */ = {
+			isa = PBXGroup;
+			children = (
+				8EFF15121B1961B00030BF45 /* PICleanProductViewController.swift */,
+			);
+			path = Clean;
+			sourceTree = "<group>";
+		};
+		8EFF15111B19618B0030BF45 /* Massive */ = {
+			isa = PBXGroup;
+			children = (
+				8EFF15141B1961F80030BF45 /* PIMassiveProductViewController.swift */,
+			);
+			path = Massive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +175,7 @@
 		8EFF14E11B195C460030BF45 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PI;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Prolific Interactive";
 				TargetAttributes = {
@@ -215,9 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFF14F31B195C460030BF45 /* SecondViewController.swift in Sources */,
 				8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */,
-				8EFF14F11B195C460030BF45 /* FirstViewController.swift in Sources */,
+				8EFF15151B1961F80030BF45 /* PIMassiveProductViewController.swift in Sources */,
+				8EFF15131B1961B00030BF45 /* PICleanProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +430,7 @@
 				8EFF150C1B195C470030BF45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EFF150D1B195C470030BF45 /* Build configuration list for PBXNativeTarget "MassiveViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +439,7 @@
 				8EFF150F1B195C470030BF45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
