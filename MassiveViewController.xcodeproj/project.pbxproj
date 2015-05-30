@@ -18,6 +18,7 @@
 		8EFF151B1B19E6320030BF45 /* PIDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF151A1B19E6320030BF45 /* PIDescriptionViewController.swift */; };
 		8EFF151D1B19E63F0030BF45 /* PISizeAndFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF151C1B19E63F0030BF45 /* PISizeAndFitViewController.swift */; };
 		8EFF151F1B19E64C0030BF45 /* PIUserReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF151E1B19E64C0030BF45 /* PIUserReviewsViewController.swift */; };
+		8EFF15221B19ED060030BF45 /* PIMassiveMoreProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF15211B19ED060030BF45 /* PIMassiveMoreProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		8EFF151A1B19E6320030BF45 /* PIDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIDescriptionViewController.swift; sourceTree = "<group>"; };
 		8EFF151C1B19E63F0030BF45 /* PISizeAndFitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PISizeAndFitViewController.swift; sourceTree = "<group>"; };
 		8EFF151E1B19E64C0030BF45 /* PIUserReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIUserReviewsViewController.swift; sourceTree = "<group>"; };
+		8EFF15211B19ED060030BF45 /* PIMassiveMoreProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIMassiveMoreProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		8EFF15111B19618B0030BF45 /* Massive */ = {
 			isa = PBXGroup;
 			children = (
+				8EFF15201B19ECEE0030BF45 /* Cells */,
 				8EFF15141B1961F80030BF45 /* PIMassiveProductViewController.swift */,
 			);
 			path = Massive;
@@ -157,6 +160,14 @@
 				8EFF151E1B19E64C0030BF45 /* PIUserReviewsViewController.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		8EFF15201B19ECEE0030BF45 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8EFF15211B19ED060030BF45 /* PIMassiveMoreProductCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				8EFF151D1B19E63F0030BF45 /* PISizeAndFitViewController.swift in Sources */,
 				8EFF15181B1966330030BF45 /* PIProduct.swift in Sources */,
 				8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */,
+				8EFF15221B19ED060030BF45 /* PIMassiveMoreProductCollectionViewCell.swift in Sources */,
 				8EFF151F1B19E64C0030BF45 /* PIUserReviewsViewController.swift in Sources */,
 				8EFF15151B1961F80030BF45 /* PIMassiveProductViewController.swift in Sources */,
 				8EFF151B1B19E6320030BF45 /* PIDescriptionViewController.swift in Sources */,

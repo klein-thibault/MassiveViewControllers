@@ -13,7 +13,7 @@ struct PIProduct {
     let resourceId: String?
     let name: String
     let price: Float
-    let image: UIImage
+    var image: UIImage
 
     static func defaultProduct() -> PIProduct {
         return PIProduct(

@@ -10,8 +10,10 @@ import UIKit
 
 typealias TableViewDataSource = PIMassiveProductViewController
 typealias TableViewDelegate = PIMassiveProductViewController
+typealias CollectionViewDataSource = PIMassiveProductViewController
+typealias CollectionViewDelegate = PIMassiveProductViewController
 
-class PIMassiveProductViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PIMassiveProductViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
     // Product Informations View
     @IBOutlet weak var productImageView: UIImageView!
@@ -26,6 +28,7 @@ class PIMassiveProductViewController: UIViewController, UITableViewDataSource, U
 
     var product: PIProduct?
     var dataSourceItems = ["Description", "Size and Fit", "User Reviews"]
+    var moreProductsSourceItems = [UIImage(named: "more_product1"), UIImage(named: "more_product2"), UIImage(named: "more_product3")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +39,7 @@ class PIMassiveProductViewController: UIViewController, UITableViewDataSource, U
 
     func loadProduct() {
         // Here you should do an API call
-        product = PIProduct.defaultProduct()
+        product = product != nil ? product : PIProduct.defaultProduct()
     }
 
     func setupView(product: PIProduct) {
@@ -49,8 +52,9 @@ class PIMassiveProductViewController: UIViewController, UITableViewDataSource, U
 
 // MARK: TableViewDataSource
 extension TableViewDataSource {
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        return dataSourceItems.count;
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -58,10 +62,12 @@ extension TableViewDataSource {
         cell.textLabel?.text = dataSourceItems[indexPath.row]
         return cell
     }
+
 }
 
 // MARK: TableViewDelegate
 extension TableViewDelegate {
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         switch indexPath.row {
@@ -78,4 +84,33 @@ extension TableViewDelegate {
             break
         }
     }
+
+}
+
+// MARK: CollectionViewDataSource
+extension CollectionViewDataSource {
+
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return moreProductsSourceItems.count
+    }
+
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        var cell: PIMassiveMoreProductCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MoreProductCollectionViewCell",
+            forIndexPath: indexPath) as! PIMassiveMoreProductCollectionViewCell
+        cell.productImageView.image = moreProductsSourceItems[indexPath.row]
+        return cell
+    }
+
+}
+
+// MARK: CollectionViewDelegate
+extension CollectionViewDelegate {
+
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        var massiveProductViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIMassiveProductViewController") as! PIMassiveProductViewController
+        massiveProductViewController.loadProduct()
+        massiveProductViewController.product?.image = moreProductsSourceItems[indexPath.row]!
+        self.navigationController?.pushViewController(massiveProductViewController, animated: true)
+    }
+
 }
