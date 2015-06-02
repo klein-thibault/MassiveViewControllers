@@ -23,6 +23,8 @@ class PIProductOptionsTableViewCell: UITableViewCell, UITableViewDataSource, UIT
 
     func setup(delegate: PIProductOptionsTableViewCellDelegate) {
         self.delegate = delegate
+        self.productOptionsTableView.dataSource = self
+        self.productOptionsTableView.delegate = self
     }
 
     // MARK: TableViewDataSource
@@ -31,7 +33,7 @@ class PIProductOptionsTableViewCell: UITableViewCell, UITableViewDataSource, UIT
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("ProductOptionCell", forIndexPath: indexPath) as? UITableViewCell
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("ProductOptionCell") as? UITableViewCell
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "ProductOptionCell")
         }

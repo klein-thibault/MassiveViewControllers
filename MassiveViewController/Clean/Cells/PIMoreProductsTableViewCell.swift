@@ -14,7 +14,7 @@ protocol PIMoreProductsTableViewCellDelegate {
 
 }
 
-class PIMoreProductsTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class PIMoreProductsTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var moreProductsCollectionView: UICollectionView!
 
@@ -27,25 +27,31 @@ class PIMoreProductsTableViewCell: UITableViewCell, UICollectionViewDataSource, 
 
     func setup(delegate: PIMoreProductsTableViewCellDelegate) {
         self.delegate = delegate
-        self.moreProductsCollectionView.registerNib(UINib(nibName: "PIMassiveMoreProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MoreProductCollectionViewCell")
+        self.moreProductsCollectionView.registerNib(UINib(nibName: "PICleanMoreProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PICleanMoreProductCollectionViewCell")
+        self.moreProductsCollectionView.dataSource = self
+        self.moreProductsCollectionView.delegate = self
     }
 
     // MARK: CollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moreProductsSourceItems.count
+        return self.moreProductsSourceItems.count
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell: PIMassiveMoreProductCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MoreProductCollectionViewCell",
-            forIndexPath: indexPath) as! PIMassiveMoreProductCollectionViewCell
-        let product: PIProduct = moreProductsSourceItems[indexPath.row]
-        cell.productImageView.image = product.image
+        var cell: PICleanMoreProductCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("PICleanMoreProductCollectionViewCell",
+            forIndexPath: indexPath) as! PICleanMoreProductCollectionViewCell
+        let product: PIProduct = self.moreProductsSourceItems[indexPath.row]
+        cell.moreProductImageView.image = product.image
         return cell
     }
 
     // MARK: CollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         self.delegate?.moreProductsTableViewCell(self, didSelectProduct: self.moreProductsSourceItems[indexPath.row])
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(145, 200)
     }
 
 }
