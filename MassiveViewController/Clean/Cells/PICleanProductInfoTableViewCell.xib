@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PICleanProductInfoTableViewCell" rowHeight="380" id="KGk-i7-Jjw" customClass="PICleanProductInfoTableViewCell" customModule="MassiveViewController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBl-fr-GyX" userLabel="Product Informations View">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="379.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Vw-EW-1b4" userLabel="Product Image View">
+                                <rect key="frame" x="50" y="8" width="220" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Vw-EW-1b4" secondAttribute="height" multiplier="2:3" id="ABH-jw-X3E"/>
+                                    <constraint firstAttribute="width" constant="220" id="K9q-yb-QRo"/>
+                                    <constraint firstAttribute="height" constant="300" id="V7o-fX-IR4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ABH-jw-X3E"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-wv-9ut" userLabel="Product Name Label">
+                                <rect key="frame" x="139" y="316" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBs-v8-dfT" userLabel="Product Price Label">
+                                <rect key="frame" x="139" y="345" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yeo-wv-9ut" secondAttribute="trailing" constant="15" id="2Uy-pD-rKo"/>
+                            <constraint firstItem="SBs-v8-dfT" firstAttribute="top" secondItem="Yeo-wv-9ut" secondAttribute="bottom" constant="8.5" id="7YS-sp-Wvz"/>
+                            <constraint firstItem="Yeo-wv-9ut" firstAttribute="top" secondItem="6Vw-EW-1b4" secondAttribute="bottom" constant="8" id="Q62-kf-wPU"/>
+                            <constraint firstAttribute="height" constant="380" id="UQZ-dl-dCF"/>
+                            <constraint firstAttribute="centerX" secondItem="6Vw-EW-1b4" secondAttribute="centerX" id="Uj5-qc-cx8"/>
+                            <constraint firstItem="Yeo-wv-9ut" firstAttribute="leading" secondItem="jBl-fr-GyX" secondAttribute="leading" constant="15" id="WAD-Fe-drS"/>
+                            <constraint firstItem="6Vw-EW-1b4" firstAttribute="centerX" secondItem="Yeo-wv-9ut" secondAttribute="centerX" id="pOy-SJ-WAh"/>
+                            <constraint firstItem="6Vw-EW-1b4" firstAttribute="top" secondItem="jBl-fr-GyX" secondAttribute="top" constant="8" id="zEO-fU-LaM"/>
+                            <constraint firstItem="SBs-v8-dfT" firstAttribute="centerX" secondItem="Yeo-wv-9ut" secondAttribute="centerX" id="zVX-gO-uFq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UQZ-dl-dCF"/>
+                                <exclude reference="WAD-Fe-drS"/>
+                                <exclude reference="2Uy-pD-rKo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jBl-fr-GyX" secondAttribute="bottom" id="Mfg-DT-1Qq"/>
+                    <constraint firstAttribute="trailing" secondItem="jBl-fr-GyX" secondAttribute="trailing" id="cMM-BR-l0v"/>
+                    <constraint firstItem="jBl-fr-GyX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="erf-v8-EqV"/>
+                    <constraint firstItem="jBl-fr-GyX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tL8-D5-7Fe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="productImageLabel" destination="Yeo-wv-9ut" id="P5c-aT-ZlZ"/>
+                <outlet property="productImageView" destination="6Vw-EW-1b4" id="p0h-pM-YES"/>
+                <outlet property="productPriceLabel" destination="SBs-v8-dfT" id="Eq5-OA-y4J"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

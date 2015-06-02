@@ -8,28 +8,43 @@
 
 import UIKit
 
-class PICleanProductViewController: UIViewController {
+class PICleanProductViewController: UIViewController, PIProductOptionsTableViewCellDelegate, PIMoreProductsTableViewCellDelegate {
+
+    @IBOutlet weak var productTableView: UITableView!
+
+    var product: PIProduct?
+    var dataController: PICleanProductDataController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.product = PIProduct.defaultProduct()
+        self.dataController = PICleanProductDataController(delegate: self, product: self.product!, tableView: self.productTableView)
+        self.dataController!.setup()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: PIProductOptionsTableViewCellDelegate
+    func productOptionsTableViewCell(cell: PIProductOptionsTableViewCell, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.row {
+        case 0:
+            let descriptionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIDescriptionViewController") as! PIDescriptionViewController
+            self.navigationController?.pushViewController(descriptionViewController, animated: true)
+        case 1:
+            let sizeAndFitViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PISizeAndFitViewController") as! PISizeAndFitViewController
+            self.navigationController?.pushViewController(sizeAndFitViewController, animated: true)
+        case 2:
+            let userReviewsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIUserReviewsViewController") as! PIUserReviewsViewController
+            self.navigationController?.pushViewController(userReviewsViewController, animated: true)
+        default:
+            break
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: PIMoreProductsTableViewCellDelegate
+    func moreProductsTableViewCell(cell: PIMoreProductsTableViewCell, didSelectProduct product: PIProduct) {
+        var massiveProductViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIMassiveProductViewController") as! PIMassiveProductViewController
+        massiveProductViewController.product = product
+        self.navigationController?.pushViewController(massiveProductViewController, animated: true)
     }
-    */
 
 }

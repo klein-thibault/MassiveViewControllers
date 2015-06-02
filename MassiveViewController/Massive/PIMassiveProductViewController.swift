@@ -23,7 +23,11 @@ class PIMassiveProductViewController: UIViewController, UITableViewDataSource, U
 
     var product: PIProduct?
     var dataSourceItems = ["Description", "Size and Fit", "User Reviews"]
-    var moreProductsSourceItems = [UIImage(named: "more_product1"), UIImage(named: "more_product2"), UIImage(named: "more_product3")]
+    var moreProductsSourceItems = [
+        PIProduct(resourceId: "1", name: "KRISTIN LEATHER WEDGE - GOLD METALLIC", price: 198, image: UIImage(named: "more_product1")!),
+        PIProduct(resourceId: "2", name: "MOORE OPEN FRONT CARDIGAN", price: 118, image: UIImage(named: "more_product2")!),
+        PIProduct(resourceId: "3", name: "CRUSH FOLDOVER STRAW CLUTCH", price: 98, image: UIImage(named: "more_product3")!)
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +44,7 @@ class PIMassiveProductViewController: UIViewController, UITableViewDataSource, U
     func setupView(product: PIProduct) {
         productNameLabel.text = product.name
         productImageView.image = product.image
-        productPriceLabel.text = "$\(product.price)"
+        productPriceLabel.text = product.formattedPrice()
     }
 
 
@@ -81,15 +85,15 @@ class PIMassiveProductViewController: UIViewController, UITableViewDataSource, U
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell: PIMassiveMoreProductCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MoreProductCollectionViewCell",
             forIndexPath: indexPath) as! PIMassiveMoreProductCollectionViewCell
-        cell.productImageView.image = moreProductsSourceItems[indexPath.row]
+        let product: PIProduct = self.moreProductsSourceItems[indexPath.row]
+        cell.productImageView.image = product.image
         return cell
     }
 
     // MARK: CollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         var massiveProductViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIMassiveProductViewController") as! PIMassiveProductViewController
-        massiveProductViewController.loadProduct()
-        massiveProductViewController.product?.image = moreProductsSourceItems[indexPath.row]!
+        massiveProductViewController.product = moreProductsSourceItems[indexPath.row]
         self.navigationController?.pushViewController(massiveProductViewController, animated: true)
     }
 

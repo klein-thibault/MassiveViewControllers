@@ -15,11 +15,22 @@ struct PIProduct {
     let price: Float
     var image: UIImage
 
+    init(resourceId: String?, name: String, price: Float, image: UIImage) {
+        self.resourceId = resourceId
+        self.name = name
+        self.price = price
+        self.image = image
+    }
+
     static func defaultProduct() -> PIProduct {
         return PIProduct(
             resourceId: "1",
             name: "PEARL SHIFT DRESS",
             price: 198,
             image: UIImage(named: "product_image")!)
+    }
+
+    func formattedPrice() -> String {
+        return "$\(price)"
     }
 }

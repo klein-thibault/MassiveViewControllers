@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PIProductOptionsTableViewCell" rowHeight="132" id="KGk-i7-Jjw" customClass="PIProductOptionsTableViewCell" customModule="MassiveViewController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YSp-g7-ijc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="131.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="44E-V7-fcq"/>
+                            <outlet property="delegate" destination="-1" id="Nua-jN-WKx"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YSp-g7-ijc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9If-TV-M9t"/>
+                    <constraint firstItem="YSp-g7-ijc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EXu-Gs-YME"/>
+                    <constraint firstAttribute="trailing" secondItem="YSp-g7-ijc" secondAttribute="trailing" id="GNe-8x-G3A"/>
+                    <constraint firstAttribute="bottom" secondItem="YSp-g7-ijc" secondAttribute="bottom" id="WEX-D6-Ssc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="productOptionsTableView" destination="YSp-g7-ijc" id="sea-qh-psQ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

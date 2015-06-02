@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="PIMoreProductsTableViewCell" customModule="MassiveViewController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="89M-Ux-byt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CyN-E7-1wh">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="1SU-o0-8cw"/>
+                            <outlet property="delegate" destination="-1" id="dlu-o8-Yvs"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="89M-Ux-byt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QWB-iq-tx7"/>
+                    <constraint firstAttribute="trailing" secondItem="89M-Ux-byt" secondAttribute="trailing" id="kgy-u2-rmO"/>
+                    <constraint firstItem="89M-Ux-byt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tVA-HE-0pC"/>
+                    <constraint firstAttribute="bottom" secondItem="89M-Ux-byt" secondAttribute="bottom" id="wax-nU-FwH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="moreProductsCollectionView" destination="89M-Ux-byt" id="FFZ-J2-7K3"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
