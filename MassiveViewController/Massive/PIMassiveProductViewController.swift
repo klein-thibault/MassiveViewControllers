@@ -8,11 +8,6 @@
 
 import UIKit
 
-typealias TableViewDataSource = PIMassiveProductViewController
-typealias TableViewDelegate = PIMassiveProductViewController
-typealias CollectionViewDataSource = PIMassiveProductViewController
-typealias CollectionViewDelegate = PIMassiveProductViewController
-
 class PIMassiveProductViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
     // Product Informations View
@@ -48,11 +43,8 @@ class PIMassiveProductViewController: UIViewController, UITableViewDataSource, U
         productPriceLabel.text = "$\(product.price)"
     }
 
-}
 
-// MARK: TableViewDataSource
-extension TableViewDataSource {
-
+    // MARK: TableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSourceItems.count;
     }
@@ -63,11 +55,7 @@ extension TableViewDataSource {
         return cell
     }
 
-}
-
-// MARK: TableViewDelegate
-extension TableViewDelegate {
-
+    // MARK: TableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         switch indexPath.row {
@@ -85,11 +73,7 @@ extension TableViewDelegate {
         }
     }
 
-}
-
-// MARK: CollectionViewDataSource
-extension CollectionViewDataSource {
-
+    // MARK: CollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return moreProductsSourceItems.count
     }
@@ -101,11 +85,7 @@ extension CollectionViewDataSource {
         return cell
     }
 
-}
-
-// MARK: CollectionViewDelegate
-extension CollectionViewDelegate {
-
+    // MARK: CollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         var massiveProductViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIMassiveProductViewController") as! PIMassiveProductViewController
         massiveProductViewController.loadProduct()
