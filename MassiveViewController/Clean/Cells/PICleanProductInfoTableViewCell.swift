@@ -13,7 +13,7 @@ class PICleanProductInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productImageLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
-    
+
     func setup(product: PIProduct) {
         productImageView.image = product.image
         productImageLabel.text = product.name

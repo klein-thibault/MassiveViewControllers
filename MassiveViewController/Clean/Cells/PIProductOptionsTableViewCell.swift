@@ -31,9 +31,13 @@ class PIProductOptionsTableViewCell: UITableViewCell, UITableViewDataSource, UIT
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ProductOptionCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = dataSourceItems[indexPath.row]
-        return cell
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("ProductOptionCell", forIndexPath: indexPath) as? UITableViewCell
+        if (cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "ProductOptionCell")
+        }
+        cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        cell?.textLabel?.text = dataSourceItems[indexPath.row]
+        return cell!
     }
 
     // MARK: TableViewDelegate

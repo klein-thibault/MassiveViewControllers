@@ -12,7 +12,7 @@ enum Module: Int {
     case Infos = 0, Options, More, ModuleCount
 }
 
-class PICleanProductDataController: NSObject, UITableViewDataSource {
+class PICleanProductDataController: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     var delegate: Any?
     var product: PIProduct
@@ -35,6 +35,7 @@ class PICleanProductDataController: NSObject, UITableViewDataSource {
         self.registerNibs(self.tableView)
 
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.reloadData()
     }
 
@@ -57,6 +58,20 @@ class PICleanProductDataController: NSObject, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier("PIMoreProductsTableViewCell") as! PIMoreProductsTableViewCell
             cell.setup(self.delegate as! PIMoreProductsTableViewCellDelegate)
             return cell
+        }
+    }
+
+    // MARK: TableViewDelegate
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch indexPath.row {
+        case Module.Infos.rawValue:
+            return 380
+        case Module.Options.rawValue:
+            return 132
+        case Module.More.rawValue:
+            return 200
+        default:
+            return 0
         }
     }
 

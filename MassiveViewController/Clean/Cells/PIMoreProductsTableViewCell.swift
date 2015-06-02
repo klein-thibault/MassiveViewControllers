@@ -27,6 +27,7 @@ class PIMoreProductsTableViewCell: UITableViewCell, UICollectionViewDataSource, 
 
     func setup(delegate: PIMoreProductsTableViewCellDelegate) {
         self.delegate = delegate
+        self.moreProductsCollectionView.registerNib(UINib(nibName: "PIMassiveMoreProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MoreProductCollectionViewCell")
     }
 
     // MARK: CollectionViewDataSource
