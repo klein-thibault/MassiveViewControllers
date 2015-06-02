@@ -51,7 +51,7 @@ class PIMoreProductsTableViewCell: UITableViewCell, UICollectionViewDataSource, 
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(145, 200)
+        return CGSizeMake(145, collectionView.frame.size.height)
     }
 
 }

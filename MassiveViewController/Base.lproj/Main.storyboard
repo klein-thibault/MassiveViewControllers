@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ay-aM-dbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="-432"/>
+            <point key="canvasLocation" x="772" y="-314"/>
         </scene>
         <!--Massive-->
         <scene sceneID="hNz-n2-bh7">
@@ -312,13 +312,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Clean" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="mha-P7-dbz"/>
                     <connections>
                         <outlet property="productTableView" destination="jJB-G9-ymY" id="6iN-qZ-2C1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1462" y="574"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -332,12 +333,29 @@
                     </tabBar>
                     <connections>
                         <segue destination="CXU-ZD-Isg" kind="relationship" relationship="viewControllers" id="MdC-d3-DPF"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="o6o-pv-6Rs" kind="relationship" relationship="viewControllers" id="PqU-DD-8eu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Clean-->
+        <scene sceneID="dkg-Lx-BZl">
+            <objects>
+                <navigationController id="o6o-pv-6Rs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Clean" id="xMW-1W-Ahl"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nW1-8L-va0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="65e-Ns-fE9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pYF-63-MMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="574"/>
         </scene>
     </scenes>
     <resources>
