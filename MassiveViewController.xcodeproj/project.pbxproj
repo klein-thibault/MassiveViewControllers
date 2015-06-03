@@ -16,6 +16,7 @@
 		8E05C0091B1D4A0400978D0D /* PICleanProductDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05C0081B1D4A0400978D0D /* PICleanProductDataController.swift */; };
 		8E05C00C1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05C00A1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift */; };
 		8E05C00D1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E05C00B1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.xib */; };
+		8E05C0101B1E7D2400978D0D /* PICleanProductViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05C00F1B1E7D2400978D0D /* PICleanProductViewNavigator.swift */; };
 		8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF14EE1B195C460030BF45 /* AppDelegate.swift */; };
 		8EFF14F61B195C460030BF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF14F41B195C460030BF45 /* Main.storyboard */; };
 		8EFF14F81B195C470030BF45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF14F71B195C470030BF45 /* Images.xcassets */; };
@@ -50,6 +51,7 @@
 		8E05C0081B1D4A0400978D0D /* PICleanProductDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PICleanProductDataController.swift; sourceTree = "<group>"; };
 		8E05C00A1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PICleanMoreProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E05C00B1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PICleanMoreProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		8E05C00F1B1E7D2400978D0D /* PICleanProductViewNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PICleanProductViewNavigator.swift; sourceTree = "<group>"; };
 		8EFF14E91B195C460030BF45 /* MassiveViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MassiveViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFF14ED1B195C460030BF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFF14EE1B195C460030BF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 				8E05C0081B1D4A0400978D0D /* PICleanProductDataController.swift */,
 			);
 			path = "Data Controllers";
+			sourceTree = "<group>";
+		};
+		8E05C00E1B1E7D1300978D0D /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				8E05C00F1B1E7D2400978D0D /* PICleanProductViewNavigator.swift */,
+			);
+			path = Navigator;
 			sourceTree = "<group>";
 		};
 		8EFF14E01B195C460030BF45 = {
@@ -173,6 +183,7 @@
 			children = (
 				8E05BFFA1B1D43B400978D0D /* Cells */,
 				8E05C0031B1D45EA00978D0D /* Data Controllers */,
+				8E05C00E1B1E7D1300978D0D /* Navigator */,
 				8EFF15121B1961B00030BF45 /* PICleanProductViewController.swift */,
 			);
 			path = Clean;
@@ -321,6 +332,7 @@
 				8EFF151D1B19E63F0030BF45 /* PISizeAndFitViewController.swift in Sources */,
 				8EFF15181B1966330030BF45 /* PIProduct.swift in Sources */,
 				8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */,
+				8E05C0101B1E7D2400978D0D /* PICleanProductViewNavigator.swift in Sources */,
 				8EFF15221B19ED060030BF45 /* PIMassiveMoreProductCollectionViewCell.swift in Sources */,
 				8E05C00C1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift in Sources */,
 				8E05C0091B1D4A0400978D0D /* PICleanProductDataController.swift in Sources */,

@@ -25,19 +25,8 @@ class PICleanProductViewController: UIViewController, PIProductOptionsTableViewC
 
     // MARK: PIProductOptionsTableViewCellDelegate
     func productOptionsTableViewCell(cell: PIProductOptionsTableViewCell, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.row {
-        case 0:
-            let descriptionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIDescriptionViewController") as! PIDescriptionViewController
-            self.navigationController?.pushViewController(descriptionViewController, animated: true)
-        case 1:
-            let sizeAndFitViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PISizeAndFitViewController") as! PISizeAndFitViewController
-            self.navigationController?.pushViewController(sizeAndFitViewController, animated: true)
-        case 2:
-            let userReviewsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PIUserReviewsViewController") as! PIUserReviewsViewController
-            self.navigationController?.pushViewController(userReviewsViewController, animated: true)
-        default:
-            break
-        }
+        var navigator: PICleanProductViewNavigator = PICleanProductViewNavigator(navigationController: self.navigationController!)
+        navigator.navigateToOption(indexPath.row)
     }
 
     // MARK: PIMoreProductsTableViewCellDelegate
