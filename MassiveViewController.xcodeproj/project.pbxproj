@@ -17,6 +17,8 @@
 		8E05C00C1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05C00A1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift */; };
 		8E05C00D1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E05C00B1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.xib */; };
 		8E05C0101B1E7D2400978D0D /* PICleanProductViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05C00F1B1E7D2400978D0D /* PICleanProductViewNavigator.swift */; };
+		8E4BA3B11B35CCE000C06C9A /* PIExtensionProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BA3B01B35CCE000C06C9A /* PIExtensionProductViewController.swift */; };
+		8E4BA3B31B35CE6A00C06C9A /* PIExtensionProductDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BA3B21B35CE6A00C06C9A /* PIExtensionProductDataSource.swift */; };
 		8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF14EE1B195C460030BF45 /* AppDelegate.swift */; };
 		8EFF14F61B195C460030BF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF14F41B195C460030BF45 /* Main.storyboard */; };
 		8EFF14F81B195C470030BF45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF14F71B195C470030BF45 /* Images.xcassets */; };
@@ -52,6 +54,8 @@
 		8E05C00A1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PICleanMoreProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E05C00B1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PICleanMoreProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		8E05C00F1B1E7D2400978D0D /* PICleanProductViewNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PICleanProductViewNavigator.swift; sourceTree = "<group>"; };
+		8E4BA3B01B35CCE000C06C9A /* PIExtensionProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIExtensionProductViewController.swift; sourceTree = "<group>"; };
+		8E4BA3B21B35CE6A00C06C9A /* PIExtensionProductDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIExtensionProductDataSource.swift; sourceTree = "<group>"; };
 		8EFF14E91B195C460030BF45 /* MassiveViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MassiveViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFF14ED1B195C460030BF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFF14EE1B195C460030BF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 			path = Navigator;
 			sourceTree = "<group>";
 		};
+		8E4BA3AF1B35CCC400C06C9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E4BA3B01B35CCE000C06C9A /* PIExtensionProductViewController.swift */,
+				8E4BA3B21B35CE6A00C06C9A /* PIExtensionProductDataSource.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8EFF14E01B195C460030BF45 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 				8EFF14F41B195C460030BF45 /* Main.storyboard */,
 				8EFF15161B19662A0030BF45 /* Models */,
 				8EFF15101B19618B0030BF45 /* Clean */,
+				8E4BA3AF1B35CCC400C06C9A /* Extensions */,
 				8EFF15111B19618B0030BF45 /* Massive */,
 				8EFF15191B19E59D0030BF45 /* Subviews */,
 				8EFF14F71B195C470030BF45 /* Images.xcassets */,
@@ -333,12 +347,14 @@
 				8EFF15181B1966330030BF45 /* PIProduct.swift in Sources */,
 				8EFF14EF1B195C460030BF45 /* AppDelegate.swift in Sources */,
 				8E05C0101B1E7D2400978D0D /* PICleanProductViewNavigator.swift in Sources */,
+				8E4BA3B11B35CCE000C06C9A /* PIExtensionProductViewController.swift in Sources */,
 				8EFF15221B19ED060030BF45 /* PIMassiveMoreProductCollectionViewCell.swift in Sources */,
 				8E05C00C1B1D64B000978D0D /* PICleanMoreProductCollectionViewCell.swift in Sources */,
 				8E05C0091B1D4A0400978D0D /* PICleanProductDataController.swift in Sources */,
 				8EFF151F1B19E64C0030BF45 /* PIUserReviewsViewController.swift in Sources */,
 				8EFF15151B1961F80030BF45 /* PIMassiveProductViewController.swift in Sources */,
 				8EFF151B1B19E6320030BF45 /* PIDescriptionViewController.swift in Sources */,
+				8E4BA3B31B35CE6A00C06C9A /* PIExtensionProductDataSource.swift in Sources */,
 				8E05C0011B1D455100978D0D /* PIProductOptionsTableViewCell.swift in Sources */,
 				8E05C0061B1D488D00978D0D /* PIMoreProductsTableViewCell.swift in Sources */,
 				8EFF15131B1961B00030BF45 /* PICleanProductViewController.swift in Sources */,
